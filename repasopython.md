@@ -119,3 +119,21 @@ alumno={
 }
 alumnos=[{},{},{}]
 ```
+# FUNCIONES 
+ ## existen dos tipos 
+
+ ### 1. propias de lenguaje
+ ## que ya vienen creadas e insertadas en python y estan listas para ser usadas
+ ## estructura de uso de una funcion
+ ## tiene el nombre seguido de parentesis podremos pasarle datos que necesita la funcion para ejecutarse 
+
+ ## esta es una funcion que nos sirve para mostrar por consola datos 
+ print('hola') 
+
+ ## esta funcion nos saber la longitud de una lista o un string
+#len nos devuelve un numero 
+print(len([1, 5, 6, 7, 8]))
+
+# es una funcion que se detiene a esperar que el usuario introdusca informacion 
+# entre parentesis podremos escribr un mensaje que indique que accion realizara el usuario 
+input('ingresa ingresa')ç
