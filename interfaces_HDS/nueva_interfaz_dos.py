@@ -25,4 +25,3 @@ widget_tres.config(width='100',height='100')
 widget_tres.config(bg='red')
 # usar el metodo loop para que la ventana mermanesca abierta
 ventana.mainloop()
-

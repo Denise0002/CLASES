@@ -15,3 +15,4 @@ menu_principal.config(width='200',height='200')
 menu_principal.config(bg='blue')
 #metodo de Tk( que mantiene la ejecucion del programa en un bucle)
 nueva_ventana.mainloop()
+
