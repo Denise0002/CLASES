@@ -25,8 +25,11 @@ class Tiendas_comerciales:
         !=ruc,bd_negocios))
         return respuesta
 
-    def actualizar_negocio(self):
-        pass
+    def actualizar_negocio(self,bd_negocios,horario_atencion):
+        respuesta=list(filter(lambda el:el
+        ["hora"]==horario_atencion,
+        bd_negocios))
+        return respuesta
         
 
     #otro metodo para crear un nuevo producto
@@ -45,5 +48,6 @@ gerente=Tiendas_comerciales()
 # print(gerente.tienda_gerente(negocios,"china"))
 # print(gerente.tienda_mas_categorias(negocios))
 # print(gerente.ruc_nombre(negocios))
-print(ruc.eliminar_negocio(negocios,1234))
-print(ruc.eliminar_negocio(negocios,123456789))
+print(gerente.eliminar_negocio(negocios,1234))
+print(gerente.eliminar_negocio(negocios,123456789))
+print(gerente.actulizar_negocio(negocios,"chinaa"))
