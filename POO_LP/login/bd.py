@@ -22,5 +22,21 @@ usuarios=[
         "edad":"18",
         "usuario":"admin",
         "password":"1234"
+    },
+    {
+        "dni":1234567,
+        "nombre":"diego",
+        "f_nacimiento":"23/08/1990",
+        "edad":"18",
+        "usuario":"admin",
+        "password":"1234"
+    },
+    {
+        "dni":1234567,
+        "nombre":"diego",
+        "f_nacimiento":"23/08/1990",
+        "edad":"18",
+        "usuario":"admin",
+        "password":"1234"
     }
 ]

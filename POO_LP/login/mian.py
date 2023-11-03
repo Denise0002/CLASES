@@ -21,7 +21,7 @@ def actualizar_dni(self,bd_,dni):
         respuesta=list(filter(lambda el:el["dni"],
         bd_usuarios))
         return respuesta
-    
+
 nombre=usuarios()
 # print(gerente.tienda_gerente(negocios,"china"))
 # print(gerente.tienda_mas_categorias(negocios))
