@@ -3,13 +3,13 @@ from funciones import*
 ventana=Tk()
 
 ventana.title("Calculadora")
-ventana.geometry("296x265")
+ventana.geometry("400x315")
 ventana.resizable(0,0)
 fuente_general=("arial",8,"bold")
 
 i=0
 pantalla=Entry(ventana,
-               width=22,
+               width=30,
                bg="black",#asigna el color de fondo
                fg="white",#asicna el color de letra
                borderwidth=0,#tamaño del borde del cuadro de texto
@@ -27,51 +27,60 @@ boton=Button(ventana,text="2",
              height=3,
              bg="white",fg="red",
              borderwidth=0,
-             cursor="hand2",font=fuente_general).grid(row=1,column=1,padx=1,pady=1)
+             cursor="hand2",font=fuente_general,
+             command=lambda:enviar_boton("2",pantalla)).grid(row=1,column=1,padx=1,pady=1)
 boton=Button(ventana,text="3",
              width=9,height=3,
              bg="white",fg="red",
              borderwidth=0,
-             cursor="hand2",font=fuente_general).grid(row=1,column=2,padx=1,pady=1)
+             cursor="hand2",font=fuente_general,
+             command=lambda:enviar_boton("3",pantalla)).grid(row=1,column=2,padx=1,pady=1)
 boton=Button(ventana,text="4",
              width=9,
              height=3,
              bg="white",fg="red",
              borderwidth=0,
-             cursor="hand2",font=fuente_general).grid(row=2,column=0,padx=1,pady=1)
+             cursor="hand2",font=fuente_general,
+             command=lambda:enviar_boton("4",pantalla)).grid(row=2,column=0,padx=1,pady=1)
 boton=Button(ventana,text="5",
              width=9,
              height=3,
              bg="white",
              fg="red",
              borderwidth=0,
-             cursor="hand2",font=fuente_general).grid(row=2,column=1,padx=1,pady=1)
+             cursor="hand2",font=fuente_general,
+             command=lambda:enviar_boton("5",pantalla)).grid(row=2,column=1,padx=1,pady=1)
 boton=Button(ventana,text="6",
              width=9,height=3,
              bg="white",fg="red",
              borderwidth=0,
-             cursor="hand2",font=fuente_general).grid(row=2,column=2,padx=1,pady=1)
+             cursor="hand2",font=fuente_general,
+             command=lambda:enviar_boton("6",pantalla)).grid(row=2,column=2,padx=1,pady=1)
 boton=Button(ventana,text="7",
              width=9,height=3,
              bg="white",
              fg="red",
              borderwidth=0,
-             cursor="hand2",font=fuente_general).grid(row=3,column=0,padx=1,pady=1)
+             cursor="hand2",font=fuente_general,
+             command=lambda:enviar_boton("7",pantalla)).grid(row=3,column=0,padx=1,pady=1)
 boton=Button(ventana,text="8",
              width=9,height=3,
              bg="white",fg="red",
              borderwidth=0,
-             cursor="hand2",font=fuente_general).grid(row=3,column=1,padx=1,pady=1)
+             cursor="hand2",font=fuente_general,
+             command=lambda:enviar_boton("8",pantalla)).grid(row=3,column=1,padx=1,pady=1)
 boton=Button(ventana,text="9",
              width=9,height=3,
              bg="white",fg="red",
              borderwidth=0,
-             cursor="hand2",font=fuente_general).grid(row=3,column=2,padx=1,pady=1)
+             cursor="hand2",font=fuente_general,
+             command=lambda:enviar_boton("9",pantalla)).grid(row=3,column=2,padx=1,pady=1)
 boton=Button(ventana,text="0",
              width=9,height=3,
              bg="white",fg="red",
              borderwidth=0,
-             cursor="hand2",font=fuente_general).grid(row=4,column=1,padx=1,pady=1)
+             cursor="hand2",font=fuente_general,
+             command=lambda:enviar_boton("0",pantalla)).grid(row=4,column=1,padx=1,pady=1)
 #bunton igual
 boton_igual=Button(ventana,text="=",
                    width=9,
@@ -79,7 +88,8 @@ boton_igual=Button(ventana,text="=",
                    bg="red",
                    fg="white",
                    borderwidth=0,
-                   cursor="hand2",font=fuente_general).grid(row=4,column=0,padx=1,pady=1)
+                   cursor="hand2",font=fuente_general,
+                   command=lambda:igual(pantalla)).grid(row=4,column=0,padx=1,pady=1)
 boton_punto=Button(ventana,text=".",
                    width=9,
                    height=3,
@@ -94,27 +104,41 @@ boton_mas=Button(ventana,text="+",
                  bg="deep sky blue",
                  fg="white",
                  borderwidth=0,
-                 cursor="hand2",font=fuente_general).grid(row=1,column=3,padx=1,pady=1)
+                 cursor="hand2",font=fuente_general,
+                 command=lambda:operacion("+",pantalla)).grid(row=1,column=3,padx=1,pady=1)
 boton_menos=Button(ventana,text="-",
                    width=9,height=3,
                    bg="deep sky blue",
                    fg="white",
                    borderwidth=0,
-                   cursor="hand2",font=fuente_general).grid(row=2,column=3,padx=1,pady=1)
+                   cursor="hand2",font=fuente_general,
+                   command=lambda:operacion("-",pantalla)).grid(row=2,column=3,padx=1,pady=1)
 boton_por=Button(ventana,text="*",
                  width=9,
                  height=3,
                  bg="deep sky blue",
                  fg="white",
                  borderwidth=0,
-                 cursor="hand2",font=fuente_general).grid(row=3,column=3,padx=1,pady=1)
+                 cursor="hand2",font=fuente_general,
+                 command=lambda:operacion("*",pantalla)).grid(row=3,column=3,padx=1,pady=1)
 boton_division=Button(ventana,text="/",
                       width=9,
                       height=3,
                       bg="deep sky blue",
                       fg="white",
                       borderwidth=0,
-                      cursor="hand2",font=fuente_general).grid(row=4,column=3,padx=1,pady=1)
+                      cursor="hand2",font=fuente_general,
+                      command=lambda:operacion("/",pantalla)).grid(row=4,column=3,padx=1,pady=1)
+
+#boton de eliminar
+boton_limpiar = Button(ventana,text="Limpiar",
+        width=40,
+        height=3,
+        bg="blue",
+        fg="white",
+        borderwidth=0,
+        cursor="hand2",font=fuente_general,
+        command=lambda:limpiar(pantalla)).grid(row=5,column=0,columnspan=4,padx=1,pady=1)
+
 
 ventana.mainloop()
-
