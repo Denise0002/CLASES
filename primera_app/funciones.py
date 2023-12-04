@@ -1,5 +1,14 @@
 from tkinter import *
 from tkinter.messagebox import *
+
+from LOS USUARIOS.usuarios import usuarios
+#creamos nuestra base de datos
+db = orm.SQLiteORM("biblioteca.db")
+db.crear_tabla(Usuarios)
+
+#funcion limpiar
+
+
 def f_limpiar(ventana):
    ventana.nombre_texto.delete(0,END)
    ventana.apellidos_texto.delete(0,END)
